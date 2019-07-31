@@ -2,6 +2,7 @@ class HeadersAndPositions
   ACCOUNT_MASTER = {
     headers: [
       'Tax Account Number',
+      'Unused',
       'SPTB Code',
       'Roll Code',
       'Legal Description 1',
@@ -90,6 +91,7 @@ class HeadersAndPositions
       699..728,
       729..738,
       739..740
-    ]
+    ],
+    type: []
   }.freeze
 end

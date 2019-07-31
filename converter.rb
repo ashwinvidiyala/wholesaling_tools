@@ -7,19 +7,24 @@ filename = ARGV[0]
 filename_without_extension = filename.split('.').first
 output_filename = "#{filename_without_extension}_parsed.csv"
 
-headers = HeadersAndPositions::ACCOUNT_MASTER[:headers].join(',')
+headers = HeadersAndPositions::ACCOUNT_MASTER[:headers].join(',') + "\n"
+positions = HeadersAndPositions::ACCOUNT_MASTER[:positions]
 
-# Create output file if needed with headers
+# Create output file (if needed) with headers
 unless File.exist?(output_filename)
   FileUtils.touch(output_filename)
   File.write(output_filename, headers, mode: 'a')
 end
 
-# Run through given file and save to file simultaneously
+# Run through input file and save to output file simultaneously
 CSV.foreach(filename) do |r|
   r.each do |row|
     CSV.open(output_filename, 'a') do |csv|
-      csv << [row]
+      data = []
+      positions.each do |pos|
+        data << row[pos]
+      end
+      csv << data
     end
   end
 end
