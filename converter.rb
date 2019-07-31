@@ -2,8 +2,6 @@ require 'csv'
 require 'pry'
 require 'fileutils'
 
-# csv = CSV.read('/test.txt')
-
 filename = ARGV[0]
 filename_without_extension = filename.split('.').first
 
@@ -16,7 +14,7 @@ unless File.exist?("#{filename_without_extension}_parsed.csv")
   FileUtils.touch("#{filename_without_extension}_parsed.csv")
 end
 
-# Run through given file and save to file
+# Run through given file and save to file simultaneously
 CSV.foreach(filename) do |r|
   r.each do |row|
     CSV.open("#{filename_without_extension}_parsed.csv", 'a') do |csv|
@@ -25,4 +23,3 @@ CSV.foreach(filename) do |r|
   end
 end
 
-# File.write('test_parsed.csv', data, mode: 'a')
