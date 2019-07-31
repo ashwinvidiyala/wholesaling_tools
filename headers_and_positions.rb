@@ -92,6 +92,51 @@ class HeadersAndPositions
       729..738,
       739..740
     ],
-    type: []
+    types: %w[
+      integer
+      character
+      integer
+      integer
+      character
+      character
+      character
+      character
+      float
+      character
+      character
+      character
+      integer
+      integer
+      integer
+      character
+      character
+      character
+      character
+      character
+      character
+      character
+      character
+      character
+      character
+      character
+      date
+      date
+      integer
+      integer
+      date
+      character
+      date
+      character
+      character
+      money
+      money
+      money
+      money
+      money
+      character
+      character
+      character
+      character
+    ]
   }.freeze
 end
