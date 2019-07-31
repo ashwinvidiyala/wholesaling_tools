@@ -1,11 +1,9 @@
 require 'csv'
 require 'pry'
 require 'fileutils'
-require 'benchmark'
 
 # csv = CSV.read('/test.txt')
 
-data = []
 filename = ARGV[0]
 filename_without_extension = filename.split('.').first
 
@@ -18,50 +16,13 @@ unless File.exist?("#{filename_without_extension}_parsed.csv")
   FileUtils.touch("#{filename_without_extension}_parsed.csv")
 end
 
-Benchmark.bm do |benchmark|
-  benchmark.report('Together') do
-    1000.times do
-      CSV.foreach(filename) do |r|
-        r.each do |row|
-          CSV.open("#{filename_without_extension}_parsed.csv", 'a') do |csv|
-            csv << [row]
-          end
-        end
-      end
-    end
-  end
-
-  benchmark.report('Separately') do
-    1000.times do
-      CSV.foreach(filename) do |r|
-        r.each do |row|
-          data << row
-        end
-      end
-
-      CSV.open("#{filename_without_extension}_parsed.csv", 'a') do |csv|
-        data.each do |element|
-          csv << [element]
-        end
-      end
+# Run through given file and save to file
+CSV.foreach(filename) do |r|
+  r.each do |row|
+    CSV.open("#{filename_without_extension}_parsed.csv", 'a') do |csv|
+      csv << [row]
     end
   end
 end
-
-# Run through given file and save to file
-# CSV.foreach(filename) do |r|
-#   r.each do |row|
-#     CSV.open("#{filename_without_extension}_parsed.csv", 'a') do |csv|
-#       csv << [row]
-#     end
-#   end
-# end
-
-# Save data to output file
-# CSV.open("#{filename_without_extension}_parsed.csv", 'a') do |csv|
-#   data.each do |element|
-#     csv << [element]
-#   end
-# end
 
 # File.write('test_parsed.csv', data, mode: 'a')
