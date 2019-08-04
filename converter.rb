@@ -17,20 +17,14 @@ unless File.exist?(output_filename)
 end
 
 # Run through input file and save to output file simultaneously
-CSV.foreach(filename, encoding: 'utf-8:utf-8') do |r|
-  begin
-    r.each do |row|
-      CSV.open(output_filename, 'a') do |csv|
-        data = []
-        positions.each do |pos|
-          data << row[pos]
-        end
-        csv << data
+CSV.foreach(filename) do |r|
+  r.each do |row|
+    CSV.open(output_filename, 'a') do |csv|
+      data = []
+      positions.each do |pos|
+        data << row[pos]
       end
+      csv << data
     end
-  rescue CSV::Parser::InvalidEncoding
-    binding.pry
-    row.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
-    retry
   end
 end
