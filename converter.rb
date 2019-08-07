@@ -4,8 +4,7 @@ require 'fileutils'
 require_relative 'headers_and_positions'
 
 filename = ARGV[0]
-filename_without_extension = filename.split('.').first
-output_filename = "#{filename_without_extension}_parsed.csv"
+output_filename = OutputFilenameGenerator.new(filename)
 
 headers = HeadersAndPositions::ACCOUNT_MASTER[:headers].join(',') + "\n"
 positions = HeadersAndPositions::ACCOUNT_MASTER[:positions]

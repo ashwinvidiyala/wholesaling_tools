@@ -6,13 +6,15 @@ class OutputFilenameGenerator
 
   def initialize(input_filename)
     @input_filename = input_filename
+
+    sanitized_output_filename
   end
+
+  private
 
   def sanitized_output_filename
     "#{input_filename_without_special_characters}_parsed.csv"
   end
-
-  private
 
   def input_filename_without_special_characters
     input_filename.split('/').last.split('.').first
