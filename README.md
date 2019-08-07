@@ -47,7 +47,15 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
 
 1. Copy over the `Master.dat` file to the `data` folder (which is ignored by
    git).
-2. Run the following command in the terminal:
+2. Replace commas with `/` in vim:
+   ```
+   :%s/,/\//g
+   ```
+3. Replace double quotes with single quotes in vim:
+   ```
+   :%s/"/'/g
+   ```
+4. Run the following command in the terminal:
    ```
    split -l 500000 Master.dat
    ```
