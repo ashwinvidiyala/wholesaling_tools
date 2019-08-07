@@ -6,7 +6,7 @@ require_relative 'output_filename_generator'
 require_relative 'file_converter'
 
 ARGV.each_with_index do |argv, i|
-  puts "Converting File #{i + 1}/#{ARGV.length}: #{argv}..."
+  puts "Converting File #{i + 1}/#{ARGV.length} '#{argv}'..."
 
   output_file = OutputFilenameGenerator.new(argv).sanitized_output_filename
   FileConverter.new(
@@ -16,5 +16,5 @@ ARGV.each_with_index do |argv, i|
     output_file: output_file
   ).convert
 
-  puts "Finished converting File #{i + 1}/#{ARGV.length}: #{output_file}"
+  puts "Finished converting File #{i + 1}/#{ARGV.length} and saved to '#{output_file}'"
 end
