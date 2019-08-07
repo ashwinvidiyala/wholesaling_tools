@@ -37,7 +37,7 @@ ruby code_violation_enhancer.rb PropertyData_R.txt code_violations.csv
 # Tarrant County Tax Roll Converter
 
 This is a simple Ruby program that converts the entire Tarrant County Tax Roll
-from a unreadable `.dat` format to a readable `.csv` format. The Tax Roll can be
+from an unreadable `.dat` format to a readable `.csv` format. The Tax Roll can be
 downloaded directly from the [Tarrant County
 Website](http://www.tarrantcounty.com/content/main/en/tax/property-tax/tarrant-county-tax-roll.html?linklocation=Public%20Information%20Requests&linkname=Tax%20Roll).
 
@@ -59,8 +59,7 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
    ```
    split -l 500000 Master.dat
    ```
-   This will break the file into smaller files not exceeding 500,000 lines. This
-   This is required because the ruby program breaks after about 500,000 lines.
+   This will break the file into smaller files not exceeding 500,000 lines. This is required because the ruby program breaks after about 500,000 lines. Well that's not exactly true. This might need to be edited after some testing.
 
 ## Running the program
 
