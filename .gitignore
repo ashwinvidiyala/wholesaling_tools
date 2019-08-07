@@ -3,3 +3,6 @@
 # Ignore actual data files (test_data is not ignored)
 Master.dat
 Master_parsed.csv
+
+# Ignore data folder
+data
