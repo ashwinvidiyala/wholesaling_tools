@@ -69,6 +69,10 @@ program like this:
 ruby ../converter.rb file_1 file_2 file_3 file_n
 ```
 
+- [ ] Try running the converter on the `Master.dat` file directly (instead of
+  the broken parts). And whenever you come across a line that's corrupt, delete
+  10 lines below it and then run the converter again.
+
 ## Joining Files
 
 Run this in the terminal:
