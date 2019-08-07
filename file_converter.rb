@@ -28,8 +28,6 @@ class FileConverter
   private
 
   def create_output_file_with_headers
-    return if File.exist?(output_file)
-
     FileUtils.touch(output_file)
     File.write(output_file, headers, mode: 'w')
   end
