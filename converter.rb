@@ -5,6 +5,10 @@ require_relative 'headers_and_positions'
 require_relative 'output_filename_generator'
 require_relative 'file_converter'
 
+# Create an OptionParser class that parses through ARGV and looks for options.
+# There's very low value in supporting multiple file uploads. Just allow for one
+# file upload and then the rest can be options. Also have some sort of -h help
+# flag that shows usage of this. It's going to be like a quasi CLI :)
 ARGV.each_with_index do |argv, i|
   puts "Converting File #{i + 1}/#{ARGV.length} '#{argv}'..."
 
