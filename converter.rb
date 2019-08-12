@@ -9,12 +9,13 @@ require_relative 'file_converter'
 # There's very low value in supporting multiple file uploads. Just allow for one
 # file upload and then the rest can be options. Also have some sort of -h help
 # flag that shows usage of this. It's going to be like a quasi CLI :)
+
 ARGV.each_with_index do |argv, i|
   puts "Converting File #{i + 1}/#{ARGV.length} '#{argv}'..."
 
   output_file = OutputFilenameGenerator.new(argv).sanitized_output_filename
   FileConverter.new(
-    headers: HeadersAndPositions::ACCOUNT_MASTER[:headers].join(',') + "\n",
+    headers: HeadersAndPositions::ACCOUNT_MASTER[:headers],
     positions: HeadersAndPositions::ACCOUNT_MASTER[:positions],
     input_file: argv,
     output_file: output_file
