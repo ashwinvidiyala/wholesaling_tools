@@ -34,7 +34,9 @@ class FileConverter
   private
 
   def create_output_file_with_headers
+    formatted_headers = headers.join(',') + "\n"
     FileUtils.touch(output_file)
     File.write(output_file, headers, mode: 'w')
+    File.write(output_file, formatted_headers, mode: 'w')
   end
 end
