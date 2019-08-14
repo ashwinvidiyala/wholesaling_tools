@@ -79,3 +79,10 @@ Run this in the terminal:
 ```
 cat file_1 file_2 file_3 file_n > joined_file.csv
 ```
+
+## To Do
+- [ ] Have a linux script that replaces `"` with `'`, `,` with `/` and also
+  splits the file. I'm not able to properly automate, but I sure as hell can
+write some scripts to make my life easier. I can probably run this script from
+the program directly too. You should probably use `sed`
+  - Potentially good article: https://www.brianstorti.com/enough-sed-to-be-useful/
