@@ -15,7 +15,7 @@ class FileConverter
     CSV.foreach(input_file) do |r|
       r.each do |row|
         CSV.open(output_file, 'a') do |csv|
-          next if delinquency_date_is_not_valid?(row)
+          # next if delinquency_date_is_not_valid?(row)
 
           data = []
           positions.each do |pos|

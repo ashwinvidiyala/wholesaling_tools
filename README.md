@@ -48,15 +48,15 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
 1. Copy over the `Master.dat` file to the `data` folder (which is ignored by
    git).
 2. Replace commas with `/` in vim:
-   ```
+   ```shell
    :%s/,/\//g
    ```
 3. Replace double quotes with single quotes in vim:
-   ```
+   ```shell
    :%s/"/'/g
    ```
 4. Run the following command in the terminal:
-   ```
+   ```shell
    split -l 500000 Master.dat
    ```
    This will break the file into smaller files not exceeding 500,000 lines. This is required because the ruby program breaks after about 500,000 lines. Well that's not exactly true. This might need to be edited after some testing.
@@ -65,8 +65,23 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
 
 Go into the `data` folder (or whichever folder the data is in), and then run the
 program like this:
-```
+```shell
 ruby ../converter.rb file_1 file_2 file_3 file_n
+```
+
+### Deleting foul lines
+
+Some lines might just be all fucked up while running this. When that happens,
+delete the line:
+```shell
+sed 'Nd' <filename> # N is the line number
+```
+
+If there's too many lines in a row that are messed up and it's getting tiring to
+just delete one line at a time, you can also delete a range of lines (I'd start
+with maybe 5 or 10 at a time):
+```shell
+sed -i '<start>,<end>d' <filename> # <start> and <end> are line numbers
 ```
 
 - [ ] Try running the converter on the `Master.dat` file directly (instead of
