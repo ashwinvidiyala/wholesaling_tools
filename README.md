@@ -74,14 +74,14 @@ ruby ../converter.rb file_1 file_2 file_3 file_n
 Some lines might just be all fucked up while running this. When that happens,
 delete the line:
 ```shell
-sed 'Nd' <filename> # N is the line number
+sed -i '<line-number>d' <filename>
 ```
 
 If there's too many lines in a row that are messed up and it's getting tiring to
 just delete one line at a time, you can also delete a range of lines (I'd start
 with maybe 5 or 10 at a time):
 ```shell
-sed -i '<start>,<end>d' <filename> # <start> and <end> are line numbers
+sed -i '<start-line-number>,<end-line-number>d' <filename>
 ```
 
 - [ ] Try running the converter on the `Master.dat` file directly (instead of
