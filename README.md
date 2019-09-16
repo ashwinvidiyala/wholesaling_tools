@@ -69,7 +69,7 @@ program like this:
 ruby ../converter.rb file_1 file_2 file_3 file_n
 ```
 
-### Deleting foul lines
+### Deleting Foul Lines
 
 Some lines might just be all fucked up while running this. When that happens,
 delete the line:
