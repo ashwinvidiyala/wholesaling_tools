@@ -25,20 +25,9 @@ class FileConverter
         end
       end
     end
-  rescue CSV::MalformedCSVError => e
-    delete_upto_given_line_with_sed(line_number: line_number_of_utf_encoding_error(e), input_file: input_file)
-    convert
   end
 
   private
-
-  def line_number_of_utf_encoding_error(error)
-    error.message.delete_suffix('.').split(' ').last.to_i
-  end
-
-  def delete_upto_given_line_with_sed(line_number:, input_file:)
-    system("sed -i.bak -e '1,#{line_number}d' #{input_file}")
-  end
 
   def create_output_file_with_headers
     formatted_headers = headers.join(',') + "\n"
