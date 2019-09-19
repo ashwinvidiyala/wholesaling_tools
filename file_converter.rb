@@ -28,6 +28,7 @@ class FileConverter
           positions.each do |pos|
             data << row[pos]
           end
+          data << excel_hyperlink_for(web_url_to_tarrant_county_online_statement(row))
           csv << data
         end
       end
@@ -68,5 +69,13 @@ class FileConverter
 
   def delinquency_date_to_be_avoided?(row)
     DELINQUENCY_DATE_TO_AVOID == header_value_in_given_row(row, 'Delinquency Date')
+  end
+
+  def web_url_to_tarrant_county_online_statement(row)
+    "https://taxonline.tarrantcounty.com/SSRSWebReport/default.aspx?id=#{header_value_in_given_row(row, 'Tax Account Number')}&type=1"
+  end
+
+  def excel_hyperlink_for(url)
+    "=hyperlink(\"#{url}\")"
   end
 end

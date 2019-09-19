@@ -40,11 +40,12 @@ class HeadersAndPositions
       # 'Current Year Improvement Value',
       # 'Current Year Adjusted Levy',
       'Current Year Amount Due',
-      'Prior Year Amount Due'
+      'Prior Year Amount Due',
       # 'Account Status Codes',
       # 'Overlap Account Number',
       # 'Overlap Country Code',
       # 'TAD Litigation Flag'
+      'Tarrant County e-Statement Link'
     ],
     positions: [
       0..10,
