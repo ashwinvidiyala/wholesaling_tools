@@ -74,7 +74,7 @@ ruby ../converter.rb file_1 file_2 file_3 file_n
 Some lines might just be all fucked up while running this. When that happens,
 delete the line:
 ```shell
-sed -i '<line-number>d' <filename>
+sed -i '' '<line-number>d' <filename>
 ```
 
 If there's too many lines in a row that are messed up and it's getting tiring to
