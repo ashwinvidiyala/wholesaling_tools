@@ -41,13 +41,12 @@ from an unreadable `.dat` format to a readable `.csv` format. The Tax Roll can b
 downloaded directly from the [Tarrant County
 Website](http://www.tarrantcounty.com/content/main/en/tax/property-tax/tarrant-county-tax-roll.html?linklocation=Public%20Information%20Requests&linkname=Tax%20Roll).
 
-[Prepping Files](#prepping-files)
+**Table of Contents**
 
-[Running The Program](#running-the-program)
-
-[Additional Documentation](#additional-documentation)
-
-[To Do](#to-do)
+[Prepping Files](#prepping-files)\
+[Running The Program](#running-the-program)\
+[Additional Documentation](#additional-documentation)\
+[To Do](#to-do)\
 
 ## Prepping Files
 
