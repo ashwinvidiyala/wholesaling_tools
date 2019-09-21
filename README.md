@@ -65,21 +65,21 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
 
 1. Create a folder called `data` (or whatever else you want to call it).
 2. Go into the `data` folder and then run the program like this:
-```shell
-ruby ../converter.rb file_1 file_2 file_3 file_n
-```
+   ```shell
+   ruby ../converter.rb file_1 file_2 file_3 file_n
+   ```
 
 ### Deleting Foul Lines
 
-**The program now automatically deletes foul lines and this does not need to be
-done manually (thank Fuck for that).** However, if the program starts fucking up and not doing this for
-whatever reason, this is how you delete a line using `sed`:
+**The program now automatically deletes foul lines (thank Fuck for that).**
+However, if the program starts fucking up and not doing this for
+whatever reason, this is how you manually delete a line using `sed`:
 
 ```shell
 sed -i -e '<line-number>d' <filename>
 ```
 
-If there's too many lines in a row that are messed up and it's getting tiring to
+If there are too many lines in a row that are messed up and it's getting tiring to
 just delete one line at a time, you can also delete a range of lines (I'd start
 with maybe 5 or 10 at a time):
 ```shell
