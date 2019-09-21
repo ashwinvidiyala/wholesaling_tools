@@ -63,18 +63,19 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
 
 ## Running the program
 
-Go into the `data` folder (or whichever folder the data is in), and then run the
-program like this:
+Go into the `data` folder and then run the program like this:
 ```shell
 ruby ../converter.rb file_1 file_2 file_3 file_n
 ```
 
 ### Deleting Foul Lines
 
-Some lines might just be all fucked up while running this. When that happens,
-delete the line:
+The program now automatically deletes foul lines and this does not need to be
+done manually. However, if the program starts fucking up and not doing this for
+whatever reason, this is how you delete a line using `sed`:
+
 ```shell
-sed -i '' '<line-number>d' <filename>
+sed -i -e '<line-number>d' <filename>
 ```
 
 If there's too many lines in a row that are messed up and it's getting tiring to
@@ -84,9 +85,12 @@ with maybe 5 or 10 at a time):
 sed -i '<start-line-number>,<end-line-number>d' <filename>
 ```
 
-- [ ] Try running the converter on the `Master.dat` file directly (instead of
-  the broken parts). And whenever you come across a line that's corrupt, delete
-  10 lines below it (vim command: `d10j` and then run the converter again.
+And if you want to be real slick, you can delete a line and also start running
+the program again in one command. For example, let's say we want to delete line
+10450 in the `xab` file:
+```shell
+sed -i -e '10450d' xab && ruby ../converter.rb xab
+```
 
 ## Joining Files
 
