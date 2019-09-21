@@ -107,7 +107,7 @@ I have a note in Bear titled `Tarrant County Tax Roll and Tax Delinquents` that 
 ### Download The Tarrant County Tax Roll
 The Tax Roll can be
 downloaded directly from the [Tarrant County
-Website](http://www.tarrantcounty.com/content/main/en/tax/property-tax/tarrant-county-tax-roll.html?linklocation=Public%20Information%20Requests&linkname=Tax%20Roll). This is the same link that's at the start of this README.
+Website](http://www.tarrantcounty.com/content/main/en/tax/property-tax/tarrant-county-tax-roll.html?linklocation=Public%20Information%20Requests&linkname=Tax%20Roll). This is the same link that's at the top of this README.
 
 ### Property Account Search
 To get more information about a property, you can go to the [Property Account Search](https://taxonline.tarrantcounty.com/taxweb/accountsearch.asp) page on the Tarrant County Website. Or you can go to the [Tarrant County Homepage](http://www.tarrantcounty.com/en.html) -> `Online Services` -> `Property Account Search`.
