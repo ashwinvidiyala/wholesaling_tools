@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Create a converted file.
+# Create a converted file
 class FileConverter
   SINGLE_FAMILY_HOME_SPTB_CODES = [1, 18].freeze # We're only targeting Single Family Homes
   PRIOR_YEAR_AMOUNT_DUE_MINIMUM = 1000 # This is just a random number. Over time I may increase or decrease this
