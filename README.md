@@ -111,6 +111,7 @@ Website](http://www.tarrantcounty.com/content/main/en/tax/property-tax/tarrant-c
 
 ### Property Account Search
 To get more information about a property, you can go to the [Property Account Search](https://taxonline.tarrantcounty.com/taxweb/accountsearch.asp) page on the Tarrant County Website. Or you can go to the [Tarrant County Homepage](http://www.tarrantcounty.com/en.html) -> `Online Services` -> `Property Account Search`.
+
 The Account Number can be found on the csv file that's spit out by this converter.
 
 ### Tarrant County Tax Roll Definition
