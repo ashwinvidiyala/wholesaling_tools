@@ -33,6 +33,12 @@ class FileConverter
         end
       end
     end
+  rescue CSV::MalformedCSVError => e
+    puts e.message
+    puts "Deleting line number #{line_number_of_utf_encoding_error(e)}..."
+    delete_foul_line_with_sed(line_number_of_utf_encoding_error(e), input_file)
+    puts 'Restarting parser...'
+    restart_parsing_file(input_file)
   end
 
   private
@@ -77,5 +83,17 @@ class FileConverter
 
   def excel_hyperlink_for(url)
     "=hyperlink(\"#{url}\")"
+  end
+
+  def line_number_of_utf_encoding_error(error)
+    error.message.delete_suffix('.').split(' ').last.to_i
+  end
+
+  def delete_foul_line_with_sed(line_number, input_file)
+    system("sed -i -e '#{line_number}d' #{input_file}")
+  end
+
+  def restart_parsing_file(input_file)
+    system("ruby ../converter.rb #{input_file}")
   end
 end
