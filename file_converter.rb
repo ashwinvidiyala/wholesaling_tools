@@ -3,10 +3,10 @@
 # Create converted file. Look at README for more information about the constants
 # used here.
 class FileConverter
-  SPTB_CODES_TO_CONVERT = [1, 18].freeze
-  PRIOR_YEAR_AMOUNT_DUE_MINIMUM = 1000
-  OWNER_NAMES_TO_AVOID = ['texas', 'fort worth', 'tarrant', 'fidelity'].freeze
-  DELINQUENCY_DATE_TO_AVOID = '01/01/9999'
+  SINGLE_FAMILY_HOME_SPTB_CODES = [1, 18].freeze # We're only targeting Single Family Homes in this list
+  PRIOR_YEAR_AMOUNT_DUE_MINIMUM = 1000 # This is just a random number. Over time I could increase or decrease this
+  OWNER_NAMES_TO_AVOID = ['texas', 'fort worth', 'tarrant', 'fidelity'].freeze # We only want homes owned by owners
+  DELINQUENCY_DATE_TO_AVOID = '01/01/9999' # These have some weird delinquency status that we don't want to fuck with
   attr_reader :headers, :positions, :input_file, :output_file
 
   def initialize(headers:, positions:, input_file:, output_file:)
@@ -61,7 +61,7 @@ class FileConverter
   end
 
   def sptb_code_to_be_ignored?(row)
-    !SPTB_CODES_TO_CONVERT.include? header_value_in_given_row(row, 'SPTB Code').to_i
+    !SINGLE_FAMILY_HOME_SPTB_CODES.include? header_value_in_given_row(row, 'SPTB Code').to_i
   end
 
   def prior_year_amount_due_is_not_high_enough?(row)
