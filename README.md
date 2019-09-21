@@ -47,19 +47,27 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
 
 1. Copy over the `Master.dat` file to the `data` folder (which is ignored by
    git).
-2. Replace commas with `/` in vim:
+2. Open the file in `vim`:
+   ```shell
+   vim Master.dat
+   ```
+3. Replace commas with `/` in `vim`:
    ```shell
    :%s/,/\//g
    ```
-3. Replace double quotes with single quotes in vim:
+4. Replace double quotes with single quotes in `vim`:
    ```shell
    :%s/"/'/g
    ```
-4. Run the following command in the terminal:
+5. Write (save) and quit the file:
+   ```shell
+   :wq
+   ```
+6. Run the following command in the terminal:
    ```shell
    split -l 500000 Master.dat
    ```
-   This will break the file into smaller files not exceeding 500,000 lines. This is required because the ruby program breaks after about 500,000 lines. Well that's not exactly true. This might need to be edited after some testing.
+   This will break the file into smaller files not exceeding 500,000 lines. This is required because the ruby program breaks after about 500,000 lines. *Well that's not exactly true. This might need to be edited after some testing.*
 
 ## Running the program
 
