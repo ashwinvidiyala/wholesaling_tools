@@ -63,15 +63,16 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
 
 ## Running the program
 
-Go into the `data` folder and then run the program like this:
+1. Create a folder called `data` (or whatever else you want to call it).
+2. Go into the `data` folder and then run the program like this:
 ```shell
 ruby ../converter.rb file_1 file_2 file_3 file_n
 ```
 
 ### Deleting Foul Lines
 
-The program now automatically deletes foul lines and this does not need to be
-done manually. However, if the program starts fucking up and not doing this for
+**The program now automatically deletes foul lines and this does not need to be
+done manually (thank Fuck for that).** However, if the program starts fucking up and not doing this for
 whatever reason, this is how you delete a line using `sed`:
 
 ```shell
@@ -82,7 +83,7 @@ If there's too many lines in a row that are messed up and it's getting tiring to
 just delete one line at a time, you can also delete a range of lines (I'd start
 with maybe 5 or 10 at a time):
 ```shell
-sed -i '<start-line-number>,<end-line-number>d' <filename>
+sed -i -e '<start-line-number>,<end-line-number>d' <filename>
 ```
 
 And if you want to be real slick, you can delete a line and also start running
@@ -94,7 +95,7 @@ sed -i -e '10450d' xab && ruby ../converter.rb xab
 
 ## Joining Files
 
-Run this in the terminal:
+After the files have been converted, run this in the terminal:
 ```
 cat file_1 file_2 file_3 file_n > joined_file.csv
 ```
