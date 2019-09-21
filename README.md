@@ -46,7 +46,7 @@ Website](http://www.tarrantcounty.com/content/main/en/tax/property-tax/tarrant-c
 [Prepping Files](#prepping-files)\
 [Running The Program](#running-the-program)\
 [Additional Documentation](#additional-documentation)\
-[To Do](#to-do)\
+[To Do](#to-do)
 
 ## Prepping Files
 
