@@ -84,8 +84,7 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
    ```shell
    caffeinate ruby ../converter.rb file_1 file_2 file_3 file_n
    ```
-   `caffeinate` is a Mac utility that prevents the computer from sleeping while
-   while the process is running.
+   `caffeinate` is a Mac utility that prevents the computer from sleeping while the process is running.
 3. There always tends to be a problem with the second chunk `xab` (one of the smaller chunks after breaking the big file up into 500,000 line   chunks). So, it would probably be faster to run two instances of the program simultaneously. This is what I would do:
    ```shell
    caffeinate ruby ../converter.rb xaa xac xad xae # Run this in one tab
