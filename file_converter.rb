@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-# Create converted file. Look at README for more information about the constants
-# used here.
+# Create a converted file.
 class FileConverter
-  SINGLE_FAMILY_HOME_SPTB_CODES = [1, 18].freeze # We're only targeting Single Family Homes in this list
-  PRIOR_YEAR_AMOUNT_DUE_MINIMUM = 1000 # This is just a random number. Over time I could increase or decrease this
+  SINGLE_FAMILY_HOME_SPTB_CODES = [1, 18].freeze # We're only targeting Single Family Homes
+  PRIOR_YEAR_AMOUNT_DUE_MINIMUM = 1000 # This is just a random number. Over time I may increase or decrease this
   OWNER_NAMES_TO_AVOID = ['texas', 'fort worth', 'tarrant', 'fidelity'].freeze # We only want homes owned by owners
   DELINQUENCY_DATE_TO_AVOID = '01/01/9999' # These have some weird delinquency status that we don't want to fuck with
   attr_reader :headers, :positions, :input_file, :output_file
