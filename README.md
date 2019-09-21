@@ -58,11 +58,12 @@ Before running the gargantuan `Master.dat` file, break it up into smaller parts:
    ```shell
    vim Master.dat
    ```
-3. Replace commas with `/` in `vim`:
+3. Replace commas with `/` in `vim` (commas fuck with parser):
    ```shell
    :%s/,/\//g
    ```
-4. Replace double quotes with single quotes in `vim`:
+4. Replace double quotes with single quotes in `vim` (double quotes fuck with
+   the parser):
    ```shell
    :%s/"/'/g
    ```
