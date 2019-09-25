@@ -39,7 +39,7 @@ ruby code_violation_enhancer.rb PropertyData_R.txt code_violations.csv
 This is a simple Ruby program that converts the entire Tarrant County Tax Roll
 from an unreadable `.dat` format to a readable `.csv` format. The Tax Roll can be
 downloaded directly from the [Tarrant County
-Website](http://www.tarrantcounty.com/content/main/en/tax/property-tax/tarrant-county-tax-roll.html?linklocation=Public%20Information%20Requests&linkname=Tax%20Roll).
+Website](http://access.tarrantcounty.com/en/tax/property-tax/tarrant-county-tax-roll.html).
 
 **Table of Contents**
 
@@ -130,7 +130,7 @@ I have a note in Bear titled `Tarrant County Tax Roll and Tax Delinquents` that 
 ### Download The Tarrant County Tax Roll
 The Tax Roll can be
 downloaded directly from the [Tarrant County
-Website](http://www.tarrantcounty.com/content/main/en/tax/property-tax/tarrant-county-tax-roll.html?linklocation=Public%20Information%20Requests&linkname=Tax%20Roll). This is the same link that's at the top of this README.
+Website](http://access.tarrantcounty.com/en/tax/property-tax/tarrant-county-tax-roll.html). This is the same link that's at the top of this README.
 
 ### Property Account Search
 To get more information about a property, you can go to the [Property Account Search](https://taxonline.tarrantcounty.com/taxweb/accountsearch.asp) page on the Tarrant County Website. Or you can go to the [Tarrant County Homepage](http://www.tarrantcounty.com/en.html) -> `Online Services` -> `Property Account Search`.
@@ -143,9 +143,9 @@ An incomplete version of this file can be found on the [Tarrant County Website](
 [This is the complete Excel File](https://github.com/ashwinvidiyala/tarrant_county_tax_roll_converter/blob/master/readme_attachments/Tarrant%20County%20Tax%20Roll%20Definition/Tarrant%20Tax%20Roll%20Record%20Definition%20Layout%20(Original%20Excel%20File).xls). Or if you're interested, [Sheet 1](https://github.com/ashwinvidiyala/tarrant_county_tax_roll_converter/blob/master/readme_attachments/Tarrant%20County%20Tax%20Roll%20Definition/Tarrant%20Tax%20Roll%20Record%20Definitions%20(Sheet%201%20of%20original%20Excel%20file).pdf) and [Sheet 2](https://github.com/ashwinvidiyala/tarrant_county_tax_roll_converter/blob/master/readme_attachments/Tarrant%20County%20Tax%20Roll%20Definition/Tarrant%20Tax%20Roll%20SPTB%20Codes%20(Sheet%202%20of%20original%20Excel%20file).pdf) in PDF form (you can read PDFs directly here on GitHub).
 
 ### Tarrant County SPTB Code Definitions
-So I found some obscure Denton County PDF ([download original](https://comptroller.texas.gov/taxes/property-tax/reappraisals/denton15-16.pdf)) which had Tarrant County SPTB Code Definitions.
+I found a [Tarrant Appraisal District Property Data Layout File](http://www.tad.org/wp-contentpdf/templates/PropertyData&PropertyLocationLayouts.pdf) that has the STPB Code Definitions. If that link doesn't work (God bless the government), click on `PropertyData&PropertyLocation Layouts` on [this page](https://www.tad.org/data-download/) (under the `Property Data` tab).
 
-I have extracted out just the relevant page and put it [here](https://github.com/ashwinvidiyala/tarrant_county_tax_roll_converter/blob/master/readme_attachments/Tarrant%20County%20SPTB%20Code%20Definitions.pdf).
+The same PDF is in this repo [here](https://github.com/ashwinvidiyala/tarrant_county_tax_roll_converter/blob/master/readme_attachments/Tarrant%20Appraisal%20District%20Property%20Data%20Definition.pdf) (Appendix C).
 
 ### City of Fort Worth Tax Foreclosed Inventory FAQ
 This might be a pretty useful FAQ PDF to keep handy. The original can be viewed on the [Fort Worth City Website](http://fortworthtexas.gov/propertymanagement/tax-foreclosed-FAQ.pdf).
