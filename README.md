@@ -13,3 +13,24 @@ will be using [PropertyData-Residential(Delimited)](http://www.tad.org/Data_file
 
 [Property Data's Spec
 File](https://www.tad.org/wp-contentpdf/templates/PropertyData&PropertyLocationLayouts.pdf) is also on the website.
+
+## Prepping File
+
+1. Open the file in `vim`:
+   ```shell
+   vim code_violations.csv
+   ```
+2. Replace double quotes with single quotes in `vim` (double quotes fuck with
+   the parser):
+   ```shell
+   :%s/"/'/g
+   ```
+3. Write (save) and quit the file:
+   ```shell
+   :wq
+   ```
+
+## Running The Code Violation Enhancer
+```shell
+ruby code_violation_enhancer.rb PropertyData_R.txt code_violations.csv
+```
