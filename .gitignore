@@ -1,4 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Ignore data folder
+# Ignore data folders
 data
+test_data
