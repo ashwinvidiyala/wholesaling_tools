@@ -39,11 +39,11 @@ class CodeViolationEnhancer
   end
 
   def add_additional_columns(code_violation_line, property_address_file_line)
-    code_violation_line << property_address_file_line[:account_num]
-    code_violation_line << property_address_file_line[:owner_name]
-    code_violation_line << property_address_file_line[:owner_address]
-    code_violation_line << property_address_file_line[:owner_citystate]
-    code_violation_line << property_address_file_line[:owner_zip]
+    code_violation_line << property_address_file_line[:account_num]&.strip
+    code_violation_line << property_address_file_line[:owner_name]&.strip
+    code_violation_line << property_address_file_line[:owner_address]&.strip
+    code_violation_line << property_address_file_line[:owner_citystate]&.strip
+    code_violation_line << property_address_file_line[:owner_zip]&.strip
   end
 
   def create_output_file_with_headers
