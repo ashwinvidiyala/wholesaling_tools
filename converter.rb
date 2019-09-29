@@ -1,6 +1,5 @@
-require 'csv'
-require 'pry'
-require 'fileutils'
+# frozen_string_literal: true
+
 require_relative 'headers_and_positions'
 require_relative 'output_filename_generator'
 require_relative 'file_converter'
