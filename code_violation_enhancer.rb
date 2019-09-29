@@ -35,7 +35,11 @@ class CodeViolationEnhancer
   private
 
   def code_violation_address_matches_property_data_file_address(code_violation_line, property_address_file_line)
-    code_violation_line[:violation_address]&.downcase == property_address_file_line[:situs_address]&.strip&.downcase
+    return false unless code_violation_line[:violation_address]
+
+    return false unless property_address_file_line[:situs_address]
+
+    code_violation_line[:violation_address].downcase == property_address_file_line[:situs_address].strip.downcase
   end
 
   def add_additional_columns(code_violation_line, property_address_file_line)
