@@ -123,7 +123,7 @@ write some scripts to make my life easier. I can probably run this script from
 the program directly too. You should probably use `sed`
   - Potentially good article: https://www.brianstorti.com/enough-sed-to-be-useful/
 
-=======
+---
 
 # Tarrant County Code Violation List Enhancer
 
