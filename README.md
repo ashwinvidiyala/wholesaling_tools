@@ -1,39 +1,3 @@
-# Tarrant County Code Violation List Enhancer
-
-This is a Ruby program that looks at the data from the Texas Appraisal District
-to get owner names, mailing addresses and other information for the entries in
-the Code Violations List.
-
-## Texas Appraisal District
-The information for each house on the code violations list comes from the [Texas
-Appraisal District Website](https://www.tad.org). The pipe delimited `.txt` file
-(because apparently fucking `.csv` is too outdated for Tarrant County) is
-obtained from [this page](https://www.tad.org/data-download/) on the website. We
-will be using [PropertyData-Residential(Delimited)](http://www.tad.org/Data_files/Download_files/PropertyData_R(Delimited).ZIP).
-
-[Property Data's Spec
-File](https://www.tad.org/wp-contentpdf/templates/PropertyData&PropertyLocationLayouts.pdf) is also on the website.
-
-## Prepping File
-
-1. Open the file in `vim`:
-   ```shell
-   vim code_violations.csv
-   ```
-2. Replace double quotes with single quotes in `vim` (double quotes fuck with
-   the parser):
-   ```shell
-   :%s/"/'/g
-   ```
-3. Write (save) and quit the file:
-   ```shell
-   :wq
-   ```
-
-## Running The Code Violation Enhancer
-```shell
-ruby code_violation_enhancer.rb PropertyData_R.txt code_violations.csv
-=======
 # Tarrant County Tax Roll Converter
 
 This is a simple Ruby program that converts the entire Tarrant County Tax Roll
@@ -158,3 +122,41 @@ I have also added it [here](https://github.com/ashwinvidiyala/tarrant_county_tax
 write some scripts to make my life easier. I can probably run this script from
 the program directly too. You should probably use `sed`
   - Potentially good article: https://www.brianstorti.com/enough-sed-to-be-useful/
+
+=======
+
+# Tarrant County Code Violation List Enhancer
+
+This is a Ruby program that looks at the data from the Texas Appraisal District
+to get owner names, mailing addresses and other information for the entries in
+the Code Violations List.
+
+## Texas Appraisal District
+The information for each house on the code violations list comes from the [Texas
+Appraisal District Website](https://www.tad.org). The pipe delimited `.txt` file
+(because apparently fucking `.csv` is too outdated for Tarrant County) is
+obtained from [this page](https://www.tad.org/data-download/) on the website. We
+will be using [PropertyData-Residential(Delimited)](http://www.tad.org/Data_files/Download_files/PropertyData_R(Delimited).ZIP).
+
+[Property Data's Spec
+File](https://www.tad.org/wp-contentpdf/templates/PropertyData&PropertyLocationLayouts.pdf) is also on the website.
+
+## Prepping File
+
+1. Open the file in `vim`:
+   ```shell
+   vim code_violations.csv
+   ```
+2. Replace double quotes with single quotes in `vim` (double quotes fuck with
+   the parser):
+   ```shell
+   :%s/"/'/g
+   ```
+3. Write (save) and quit the file:
+   ```shell
+   :wq
+   ```
+
+## Running The Code Violation Enhancer
+```shell
+ruby code_violation_enhancer.rb PropertyData_R.txt code_violations.csv
