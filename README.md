@@ -145,7 +145,7 @@ screenshot if that doesn't make sense:
 5. For more information about how to deal with this list: [Marketing On A
    Limited Budget by Targeting Niche Lists by Tom Krol in Wholesaling Inc
 Forum](http://myrhinotribe.com/members/index.php?threads/marketing-marketing-on-a-limited-budget-by-tom-krol-wednesday-august-7-2019.5888/#post-31912).
-A [PDF of the webpage]() is also saved in this repo.
+A [PDF of the webpage](https://github.com/ashwinvidiyala/wholesaling_tools/blob/master/readme_attachments/Marketing%20On%20A%20Limited%20Budget%20by%20Targeting%20Niche%20Lists%20by%20Tom%20Krol%20in%20Wholesaling%20Inc%20Forum.pdf) is also saved in this repo.
 
 ## Texas Appraisal District
 The information for each house on the code violations list comes from the [Texas
