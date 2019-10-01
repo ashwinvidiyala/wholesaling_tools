@@ -131,6 +131,14 @@ This is a Ruby program that looks at the data from the Texas Appraisal District
 to get owner names, mailing addresses and other information for the entries in
 the Code Violations List.
 
+## Code Violation File
+1. Go to the [Fort Worth Code Violations
+Page](https://data.fortworthtexas.gov/Property-Data/Code-Violations/spnu-bq4u)
+and click on `Export` at the top right and then `CSV For Excel`. Look at the
+[screenshot]() if that doesn't make sense.
+2. After downloading the file, filter out only those records that have a `High Grass/Weeds` violation.
+3. Copy over this information into another file and save.
+
 ## Texas Appraisal District
 The information for each house on the code violations list comes from the [Texas
 Appraisal District Website](https://www.tad.org). The pipe delimited `.txt` file
