@@ -4,5 +4,6 @@
 Master.dat
 Master_parsed.csv
 
-# Ignore data folder
-data
+# Ignore data folders
+code_violation_data
+tax_roll_data
