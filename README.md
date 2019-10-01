@@ -135,7 +135,7 @@ the Code Violations List.
 1. Go to the [Fort Worth Code Violations
 Page](https://data.fortworthtexas.gov/Property-Data/Code-Violations/spnu-bq4u)
 and click on `Export` at the top right and then `CSV For Excel`. Look at the
-[screenshot]() if that doesn't make sense.
+[screenshot](https://github.com/ashwinvidiyala/wholesaling_tools/blob/master/readme_attachments/Fort%20Worth%20Code%20Violations%20Screenshot.jpg) if that doesn't make sense.
 2. After downloading the file, filter out only those records that have a `High Grass/Weeds` violation.
 3. Copy over this information into another file and save.
 
