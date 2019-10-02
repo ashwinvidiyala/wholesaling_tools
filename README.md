@@ -162,5 +162,6 @@ will be using [PropertyData-Residential(Delimited)](http://www.tad.org/Data_file
 File](https://www.tad.org/wp-contentpdf/templates/PropertyData&PropertyLocationLayouts.pdf) is also on the website.
 
 ## Running The Code Violation Enhancer
+If you're in the `data` folder:
 ```shell
-ruby code_violation_enhancer.rb PropertyData_R.txt code_violations.csv
+ruby ../enhancer.rb PropertyData_R.txt code_violations.csv
