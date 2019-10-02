@@ -1,6 +1,5 @@
-### [Tarrant County Tax Roll Converter](#tarrant-county-tax-roll-converter)\
-### [Tarrant County Code Violation List
-Enhancer](#tarrant-county-code-violation-list-enhancer)
+### [Tarrant County Tax Roll Converter](#tarrant-county-tax-roll-converter)
+### [Tarrant County Code Violation List Enhancer](#tarrant-county-code-violation-list-enhancer)
 
 # Tarrant County Tax Roll Converter
 
