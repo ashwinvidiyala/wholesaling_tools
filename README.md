@@ -162,12 +162,13 @@ will be using [PropertyData-Residential(Delimited)](http://www.tad.org/Data_file
 File](https://www.tad.org/wp-contentpdf/templates/PropertyData&PropertyLocationLayouts.pdf) is also on the website.
 
 ## Prepping File
-There's probably value in creating a copy of the file and doing this on that
-instead of the original file. Just an extra layer of precaution.
+So it's the Texas Appraisal District's `PropertyData_R.txt` file that needs to
+be prepped like this and NOT the `code_violation.csv` file. That took me a while
+to figure out :)
 
 1. Open the file in `vim`:
    ```shell
-   vim code_violations.csv
+   vim PropertyData_R.txt
    ```
 2. Replace double quotes with single quotes in `vim` (double quotes fuck with
    the parser):
