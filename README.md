@@ -138,7 +138,8 @@ and click on `Export` at the top right and then `CSV For Excel`. Look at the
 screenshot if that doesn't make sense:
 ![](https://github.com/ashwinvidiyala/wholesaling_tools/blob/master/readme_attachments/Fort%20Worth%20Code%20Violations%20Screenshot.jpg)
 2. After downloading the file, filter out only those records that have a `High Grass/Weeds` violation.
-3. Filter out only the last six months' worth of data.
+3. Filter out only the last six months' worth of data (I look at the
+   `Violation_Created_Date` column). I also sort in ascending order after.
 4. Copy over this information into another file (or another sheet in the same Excel
    file; you can delete the original sheet after copying over the records you
    need)  and save.
