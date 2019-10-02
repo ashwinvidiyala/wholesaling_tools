@@ -1,5 +1,5 @@
-[Tarrant County Tax Roll Converter](#tarrant-county-tax-roll-converter)\
-[Tarrant County Code Violation List
+### [Tarrant County Tax Roll Converter](#tarrant-county-tax-roll-converter)\
+### [Tarrant County Code Violation List
 Enhancer](#tarrant-county-code-violation-list-enhancer)
 
 # Tarrant County Tax Roll Converter
@@ -141,7 +141,7 @@ the Code Violations List.
 
 [Code Violation File](#code-violation-file)\
 [Texas Appraisal Distrcit](#texas-appraisal-district)\
-[Prepping File](#prepping-file)
+[Prepping File](#prepping-file)\
 [Running The Code Violation Enhancer](#running-the-code-violation-enhancer)
 
 ## Code Violation File
