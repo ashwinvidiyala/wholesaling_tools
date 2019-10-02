@@ -82,7 +82,7 @@ And if you want to be real slick, you can delete a line and also start running
 the program again in one command. For example, let's say we want to delete line
 10450 in the `xab` file:
 ```shell
-sed -i -e '10450d' xab && ruby ../converter.rb xab
+sed -i -e '10450d' xab && caffeinate ruby ../converter.rb xab
 ```
 
 ## Joining Files
@@ -193,4 +193,4 @@ to figure out :)
 ## Running The Code Violation Enhancer
 If you're in the `data` folder:
 ```shell
-ruby ../enhancer.rb PropertyData_R.txt code_violations.csv
+caffeinate ruby ../enhancer.rb PropertyData_R.txt code_violations.csv
