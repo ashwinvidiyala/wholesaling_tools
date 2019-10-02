@@ -1,3 +1,7 @@
+[Tarrant County Tax Roll Converter](#tarrant-county-tax-roll-converter)\
+[Tarrant County Code Violation List
+Enhancer](#tarrant-county-code-violation-list-enhancer)
+
 # Tarrant County Tax Roll Converter
 
 This is a simple Ruby program that converts the entire Tarrant County Tax Roll
@@ -132,6 +136,13 @@ the program directly too. You should probably use `sed`
 This is a Ruby program that looks at the data from the Texas Appraisal District
 to get owner names, mailing addresses and other information for the entries in
 the Code Violations List.
+
+**Table of Contents**
+
+[Code Violation File](#code-violation-file)\
+[Texas Appraisal Distrcit](#texas-appraisal-district)\
+[Prepping File](#prepping-file)
+[Running The Code Violation Enhancer](#running-the-code-violation-enhancer)
 
 ## Code Violation File
 1. Go to the [Fort Worth Code Violations
