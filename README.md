@@ -142,7 +142,7 @@ screenshot if that doesn't make sense:
    `Violation_Created_Date` column). I also sort in ascending order after.
 4. Copy over this information into another file (or another sheet in the same Excel
    file; you can delete the original sheet after copying over the records you
-   need)  and save.
+   need) and save. Select all (`cmd + a`) and copy (`cmd + c`).
 5. For more information about how to deal with this list: [Marketing On A
    Limited Budget by Targeting Niche Lists by Tom Krol in Wholesaling Inc
 Forum](http://myrhinotribe.com/members/index.php?threads/marketing-marketing-on-a-limited-budget-by-tom-krol-wednesday-august-7-2019.5888/#post-31912).
