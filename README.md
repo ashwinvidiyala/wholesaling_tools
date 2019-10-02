@@ -14,6 +14,8 @@ Website](http://access.tarrantcounty.com/en/tax/property-tax/tarrant-county-tax-
 [To Do](#to-do)
 
 ## Prepping Files
+There's probably value in creating a copy of the file and doing this on that
+instead of the original file. Just an extra layer of precaution.
 
 Before running the gargantuan `Master.dat` file, break it up into smaller parts:
 
@@ -160,6 +162,8 @@ will be using [PropertyData-Residential(Delimited)](http://www.tad.org/Data_file
 File](https://www.tad.org/wp-contentpdf/templates/PropertyData&PropertyLocationLayouts.pdf) is also on the website.
 
 ## Prepping File
+There's probably value in creating a copy of the file and doing this on that
+instead of the original file. Just an extra layer of precaution.
 
 1. Open the file in `vim`:
    ```shell
