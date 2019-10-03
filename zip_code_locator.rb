@@ -7,11 +7,12 @@ require 'geocoder'
 
 # Locates Zip Code from a Latitude and Longitude
 class ZipCodeLocator
-  attr_reader :input_file, :output_file
+  attr_reader :input_file, :output_file, :use_street_address
 
-  def initialize(input_file:, output_file:)
+  def initialize(input_file:, output_file:, use_street_address: false)
     @input_file = input_file
     @output_file = output_file
+    @use_street_address = use_street_address
 
     create_output_file_with_headers
   end
@@ -34,7 +35,7 @@ class ZipCodeLocator
     File.write(output_file, formatted_headers, mode: 'w')
   end
 
-  def zip_code(line, use_street_address: false)
+  def zip_code(line)
     results = if use_street_address
                 Geocoder.search("#{line[:violation_address]}, Fort Worth Texas")
               else
