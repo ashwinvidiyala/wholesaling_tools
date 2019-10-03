@@ -7,19 +7,20 @@ require 'geocoder'
 
 # Locates Zip Code from a Latitude and Longitude
 class ZipCodeLocator
-  attr_reader :input_file, :output_file, :use_street_address
+  attr_reader :input_file, :output_file, :use_street_address, :street_address_column_name
 
-  def initialize(input_file:, output_file:, use_street_address: false)
+  def initialize(input_file:, output_file:, use_street_address: false, street_address_column_name:)
     @input_file = input_file
     @output_file = output_file
     @use_street_address = use_street_address
+    @street_address_column_name = street_address_column_name.to_sym
 
     create_output_file_with_headers
   end
 
   def find_zip_codes
     CSV.open(input_file, 'r', headers: true, header_converters: :symbol).each do |line|
-      puts "Zip Code for '#{line[:violation_address]}' is #{zip_code(line)}"
+      puts "Zip Code for '#{line[street_address_column_name]&.strip}' is #{zip_code(line)}"
       line << zip_code(line)
       write_line_to_output_file(line)
     end
@@ -37,7 +38,7 @@ class ZipCodeLocator
 
   def zip_code(line)
     results = if use_street_address
-                Geocoder.search("#{line[:violation_address]}, Fort Worth Texas")
+                Geocoder.search("#{line[street_address_column_name]&.strip}, Fort Worth Texas")
               else
                 Geocoder.search([line[:latitude], line[:longitude]])
               end
