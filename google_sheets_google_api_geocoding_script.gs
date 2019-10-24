@@ -11,6 +11,12 @@
 
 // Usage: GeocodeWithKey(A1) where A1 is a cell reference.
 
+// After this thing spits out a zip code, latitude and longitude, I create three
+// addditional columns, copy the values and then do cmd + shift + v to paste
+// only the values into these additional columns and then I delete the function calls
+// from the old columns. I do this so that the function is not making
+// unnecessary calls every time the Google Sheet is refreshed (which it will).
+
 
 //Author
 //Muhammad Saleem
@@ -28,10 +34,9 @@ function onOpen() {
   .addToUi();
 }
 
-
 function GeocodeWithKey(address) {
   var row = [];
-    
+
     var apiKey = "GOOGLE_CLOUD_API_TOKEN";
     try
     {
