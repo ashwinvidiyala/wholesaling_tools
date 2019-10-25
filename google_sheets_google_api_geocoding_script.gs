@@ -1,3 +1,6 @@
+// There is also a google_sheets_limited_geocoding script that does pretty much
+// what this script does but with only a limit of 100 requests per day.
+
 // I hired someone on Fiverr to write this script for me to geocode addresses in
 // Google Sheets. This script takes an input of an address (House Number, Street
 // name, City and State) with no zip code, and then spits out three columns: zip
