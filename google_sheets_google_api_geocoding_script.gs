@@ -17,15 +17,9 @@
 // from the old columns. I do this so that the function is not making
 // unnecessary calls every time the Google Sheet is refreshed (which it will).
 
-
 //Author
 //Muhammad Saleem
 //https://www.fiverr.com/saleem_works
-
-var Spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-var sheet = Spreadsheet.getSheetByName("tax_roll_10_02_2019_partially_geocoded"); 
-var lrow=sheet.getLastRow();
-var dataSheet = sheet.getDataRange().getValues();
 
 function onOpen() {
   var ui = SpreadsheetApp.getUi()
