@@ -9,9 +9,10 @@ require_relative 'output_file_headers'
 class CodeViolationEnhancer
   HEADERS = OutputFileHeaders::HEADERS.freeze
 
-  attr_reader :code_violation_file, :property_address_file, :output_file
+  attr_reader :actual_code_violation_file, :code_violation_file, :property_address_file, :output_file
 
   def initialize(code_violation_file:, property_address_file:, output_file:)
+    @actual_code_violation_file = code_violation_file
     @code_violation_file = CSV.read(code_violation_file, headers: true, header_converters: :symbol, converters: :all)
     @property_address_file = property_address_file
     @output_file = output_file
@@ -30,6 +31,12 @@ class CodeViolationEnhancer
         write_data_to_output_file(code_violation_line)
       end
     end
+  rescue CSV::MalformedCSVError => e
+    puts e.message
+    puts "Deleting line number #{line_number_of_utf_encoding_error(e)}..."
+    delete_foul_line_with_sed(line_number_of_utf_encoding_error(e), property_address_file)
+    puts 'Restarting parser...'
+    restart_parsing_file(property_address_file, actual_code_violation_file)
   end
 
   private
@@ -60,5 +67,17 @@ class CodeViolationEnhancer
     CSV.open(output_file, 'a') do |csv|
       csv << code_violation_line
     end
+  end
+
+  def line_number_of_utf_encoding_error(error)
+    error.message.delete_suffix('.').split(' ').last.to_i
+  end
+
+  def delete_foul_line_with_sed(line_number, property_address_file)
+    system("sed -i -e '#{line_number}d' #{property_address_file}")
+  end
+
+  def restart_parsing_file(property_address_file, actual_code_violation_file)
+    system("ruby ../enhancer.rb #{property_address_file} #{actual_code_violation_file}")
   end
 end

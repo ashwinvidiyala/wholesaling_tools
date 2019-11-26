@@ -136,6 +136,13 @@ This is a Ruby program that looks at the data from the Texas Appraisal District
 to get owner names, mailing addresses and other information for the entries in
 the Code Violations List.
 
+**This can also be used to just fetch the Owner Name and Address from a file
+with just the property addresses in Tarrant county. Just make sure the file with
+the property addresses has the info in a column with the header
+`Violation_Address` and that the file has the name `code` in it somewhere. I
+will have to make quite a few changes to the `code_violation_enhancer` over time
+to make all of this smooth, but for now, this works.**
+
 **Table of Contents**
 
 [Code Violation File](#code-violation-file)\
