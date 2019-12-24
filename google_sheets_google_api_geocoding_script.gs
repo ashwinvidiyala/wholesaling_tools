@@ -8,7 +8,7 @@
 // the right of the column in which this function is being used.
 
 // This script would first have to be added in the Script Editor by going to
-// Tools -> Script Editor and then adding this and save it.
+// Tools -> Script Editor and then add this code and save it.
 
 // Before using this, replace "GOOGLE_CLOUD_API_TOKEN" with your Google Cloud API Token
 
@@ -18,7 +18,12 @@
 // addditional columns, copy the values and then do cmd + shift + v to paste
 // only the values into these additional columns and then I delete the function calls
 // from the old columns. I do this so that the function is not making
-// unnecessary calls every time the Google Sheet is refreshed (which it will).
+// unnecessary calls every time the Google Sheet is refreshed (which it
+// will). Also, after copying over the formula to all the associated rows (by
+// first pasting the formula in the first row and then selecting all the cells
+// till the required row and doing cmd + enter), don't do anything until all the
+// values are calculated and you did the cmd + shift + v thing. Even sorting the
+// column makes the formula make API calls again apparently. So fucking stupid.
 
 //Author
 //Muhammad Saleem
