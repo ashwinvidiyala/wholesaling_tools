@@ -4,3 +4,4 @@ source 'https://rubygems.org'
 
 gem 'geocoder'
 gem 'pry', '~> 0.12.2'
+gem 'dotenv'
