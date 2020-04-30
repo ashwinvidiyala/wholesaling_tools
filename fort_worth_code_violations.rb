@@ -54,7 +54,8 @@ class FileCleaner
   end
 
   def zip_code(row)
-    GoogleMapsApiService.new.fetch_zip_code(concatenated_address_without_zip(row))
+    retrieved_zip_code = GoogleMapsApiService.new.fetch_zip_code(concatenated_address_without_zip(row))
+    retrieved_zip_code.is_a?(String) ? retrieved_zip_code : ''
   end
 end
 
@@ -87,7 +88,10 @@ class GoogleMapsApiService
 
   def get_zip_code_from_response(response)
     JSON.parse(response.body).each do |key,value|
-      if key == 'results'
+      if key == 'error_message'
+        puts value
+        break
+      elsif key == 'results'
         value.first.each do |k,v|
           if k == 'address_components'
             v.each do |response_hash|
