@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 # This script is used in conjunction with the fort_worth_code_violations bash script
 
-require 'dotenv/load'
 require 'csv'
 require 'fileutils'
 require 'uri'
