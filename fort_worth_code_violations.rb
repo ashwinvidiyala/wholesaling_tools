@@ -88,6 +88,7 @@ class GoogleMapsApiService
 
   def get_zip_code_from_response(response)
     JSON.parse(response.body).each do |key,value|
+      begin
       if key == 'error_message'
         puts value
         break
@@ -100,6 +101,9 @@ class GoogleMapsApiService
             end
           end
         end
+      end
+      rescue NoMethodError
+        next
       end
     end
   end
