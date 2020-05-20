@@ -25,11 +25,15 @@ class FileCleaner
     create_output_file_with_headers
 
     CSV.foreach(input_file, headers: true) do |row|
-      CSV.open(output_file, 'a') do |csv|
-        next unless TARGETED_VIOLATION_TYPES.include? row['Complaint_Type_Description']
-        data = [row['Violation_Address'], row['City'], row['State'], zip_code(row), row['Case_Created_Date'], row['Complaint_Type_Description']]
-        csv << data
+      begin
+        CSV.open(output_file, 'a') do |csv|
+          next unless TARGETED_VIOLATION_TYPES.include? row['Complaint_Type_Description']
+          data = [row['Violation_Address'], row['City'], row['State'], zip_code(row), row['Case_Created_Date'], row['Complaint_Type_Description']]
+          csv << data
+        end
       end
+    rescue CSV::MalformedCSVError
+      next
     end
   end
 
