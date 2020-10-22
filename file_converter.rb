@@ -3,7 +3,7 @@
 # Create a converted file
 class FileConverter
   SINGLE_FAMILY_HOME_SPTB_CODES = [1, 18, 23, 39, 10].freeze # We're only targeting Single Family Homes (A, A1, A3, A4, A5) and no mobile homes (A2). We're also targeting Vacant Land Residential (C1). For a list of the corresponding SPTB code numbers to the defintions, look at `tarrant_county_tax_roll_converter/readme_attachments/Tarrant County Tax Roll Definition/Tarrant Tax Roll SPTB Codes (Sheet 2 of original Excel file).pdf` in the repo on GitHub. Look at the `Tarrant County SPTB Code Definitions` heading in the README to just get the SPTB code definitions.
-  PRIOR_YEAR_AMOUNT_DUE_MINIMUM = 1000 # This is just a random number. Over time I may increase or decrease this
+  PRIOR_YEAR_AMOUNT_DUE_MINIMUM = 1 # This is just a random number. Over time I may increase or decrease this
   OWNER_NAMES_TO_AVOID = ['texas', 'fort worth', 'tarrant', 'fidelity', 'homeowner', 'bank', 'development', 'inc', 'corp', 'management'].freeze # We only want homes owned by owners; maybe we can leave LLCs on there
   DELINQUENCY_DATE_TO_AVOID = '01/01/9999' # These have some weird delinquency status that we don't want to fuck with
   attr_reader :headers, :positions, :input_file, :output_file
