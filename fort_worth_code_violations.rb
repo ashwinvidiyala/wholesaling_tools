@@ -59,7 +59,7 @@ class FileCleaner
 
   def zip_code(row)
     retrieved_zip_code = GoogleMapsApiService.new.fetch_zip_code(concatenated_address_without_zip(row))
-    retrieved_zip_code.is_a?(String) ? retrieved_zip_code : ''
+    retrieved_zip_code.is_a?(String) ? retrieved_zip_code : ' '
   end
 end
 
